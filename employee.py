@@ -1,6 +1,5 @@
 """Employee pay calculator."""
 """ENTER YOUR SOLUTION HERE!"""
-
 class Contract:
     def __init__(self, contract_type, salary=None, hourly_rate=None):
         self.contract_type = contract_type
@@ -53,21 +52,10 @@ class Employee:
 
         return pay_description
 
-
-# Billie works on a monthly salary of 4000.  Their total pay is 4000.
-billie = Employee('Billie')
-
-# Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
-charlie = Employee('Charlie')
-
-# Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
-renee = Employee('Renee')
-
-# Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
-jan = Employee('Jan')
-
-# Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
-robbie = Employee('Robbie')
-
-# Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee('Ariel')
+# Employee instances as per the test file
+billie = Employee(name='Billie', contract_type='Salary', salary=4000)
+charlie = Employee(name='Charlie', contract_type='Hourly', hourly_rate=25, hours_worked=100)
+renee = Employee(name='Renee', contract_type='Salary', salary=3000, commission_type='Contract Landed', contracts_landed=4, commission_per_contract=200)
+jan = Employee(name='Jan', contract_type='Hourly', hourly_rate=25, hours_worked=150, commission_type='Contract Landed', contracts_landed=3, commission_per_contract=220)
+robbie = Employee(name='Robbie', contract_type='Salary', salary=2000, commission_type='Fixed', fixed_bonus=1500)
+ariel = Employee(name='Ariel', contract_type='Hourly', hourly_rate=30, hours_worked=120, commission_type='Fixed', fixed_bonus=600)
